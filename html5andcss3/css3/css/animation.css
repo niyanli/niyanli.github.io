@@ -14,6 +14,7 @@ html *{padding:0;margin:0;}
 	height: 32px;
 	background: transparent;
 	border:none;
+	cursor: pointer;
 }
 .hamburger:active,.hamburger:focus{outline: none;}
 .hamburger.is-closed .hamb-top,
