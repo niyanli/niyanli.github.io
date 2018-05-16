@@ -1,0 +1,102 @@
+html *{padding:0;margin:0;}
+
+.navbar-wrap{
+	position: fixed;
+}
+
+/* 菜单按钮图标动画 */
+.hamburger{
+	position: absolute;
+	z-index: 999;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 32px;
+	height: 32px;
+	background: transparent;
+	border:none;
+}
+.hamburger:active,.hamburger:focus{outline: none;}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom{
+	position: absolute;
+	left: 0;
+	height: 4px;
+	width: 32px;
+	background-color: #1a1a1a;
+}
+.hamburger.is-closed .hamb-top{
+	top: 5px;
+	-ms-transition: -ms-transform 500ms;/* IE */
+	-webkit-transition: -webkit-transform 500ms;/* Safari */
+	transition: transform 500ms;
+}
+.hamburger.is-closed .hamb-middle{
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom{
+	bottom: 5px;
+	-ms-transition: -ms-transform 500ms;/* IE */
+	-webkit-transition: -webkit-transform 500ms;/* Safari */
+	transition: transform 500ms;
+}
+.hamburger.is-closed:hover .hamb-top{
+	-ms-transform: translate(0, -4px); /* IE */
+	-webkit-transform: translate(0, -4px);/* Safari */
+	transform: translate(0, -4px);
+}
+.hamburger.is-closed:hover .hamb-bottom{
+	-ms-transform: translate(0, 4px); /* IE */
+	-webkit-transform: translate(0, 4px);/* Safari */
+	transform: translate(0, 4px);
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom{
+	top: 50%;
+	margin-top: -2px;
+	-ms-transition: -ms-transform 500ms;
+	-webkit-transition: -webkit-transform 500ms;
+	transition: transform 500ms;
+}
+.hamburger.is-open .hamb-middle{display: none;}
+.hamburger.is-open .hamb-top{
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-ms-transition: -ms-transform 500ms;
+	-webkit-transition: -webkit-transform 500ms;
+	transition: transform 500ms;
+}
+.hamburger.is-open .hamb-bottom{
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-ms-transition: -ms-transform 500ms;
+	-webkit-transition: -webkit-transform 500ms;
+	transition: transform 500ms;
+}
+
+/*导航菜单列表*/
+#sidebar_wrapper{
+	position: absolute;
+	top: 40px;
+	padding-left: 0px;
+	margin-left: -200px;
+	width: 200px;
+	-ms-transition: all .5s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+
+}
+#sidebar_wrapper.toggled{
+	padding-left: 200px;	
+}
+.nav-sidebar{border: 1px solid #ccc;background-color: #517b20;}
+.nav-sidebar li{padding: 4px 10px;}
+.nav-sidebar li.cur{background-color: #1dad1c;}
+.nav-sidebar li:hover{background-color: #1dad1c;}
+.nav-sidebar li a{color: #fff;text-decoration: none;}
