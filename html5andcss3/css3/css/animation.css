@@ -83,7 +83,7 @@ html *{padding:0;margin:0;}
 /*导航菜单列表*/
 #sidebar_wrapper{
 	position: absolute;
-	top: 40px;
+	top: 50px;
 	padding-left: 0px;
 	margin-left: -200px;
 	width: 200px;
