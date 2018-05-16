@@ -1,4 +1,21 @@
+.left{float: left;}
+.right{float: right;}
 article{
 	padding: 20px 60px;
 }
-header h1{text-align: center;}
+header{padding: 10px 0 20px 0;}
+header h1{
+	text-align: center;
+}
+section{margin-bottom: 8px;}
+section p{
+	text-indent: 1cm;
+	line-height: 25px;
+    font-weight: 400;
+    color: #6a6a6a;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 8px;
+}
+footer{margin-top: 30px;}
+.morelinks a{text-decoration: none;cursor: pointer;font-size: 16px;font-weight: 400;color: #428bca;}
