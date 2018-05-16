@@ -1,7 +1,9 @@
 .left{float: left;}
 .right{float: right;}
+.header{position:fixed;width:100%;top:0;background-color: #517b20;padding: 10px 70px;height: 50px;line-height: 50px;text-align: left;color: #fff;}
 article{
 	padding: 20px 60px;
+	margin-top: 70px;
 }
 header{padding: 10px 0 20px 0;}
 header h1{
@@ -19,3 +21,4 @@ section p{
 }
 footer{margin-top: 30px;}
 .morelinks a{text-decoration: none;cursor: pointer;font-size: 16px;font-weight: 400;color: #428bca;}
+.morelinks a:hover{font-weight: bold;text-shadow:rgba(255, 255, 255, .8) 0px 0px 4px;};
