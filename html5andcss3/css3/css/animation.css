@@ -14,7 +14,6 @@ html *{padding:0;margin:0;}
 	height: 32px;
 	background: transparent;
 	border:none;
-	cursor: pointer;
 }
 .hamburger:active,.hamburger:focus{outline: none;}
 .hamburger.is-closed .hamb-top,
@@ -97,7 +96,82 @@ html *{padding:0;margin:0;}
 	padding-left: 200px;	
 }
 .nav-sidebar{border: 1px solid #ccc;background-color: #517b20;}
-.nav-sidebar li{padding: 4px 10px;}
+.nav-sidebar li{padding: 8px 10px;}
 .nav-sidebar li.cur{background-color: #1dad1c;}
 .nav-sidebar li:hover{background-color: #1dad1c;}
 .nav-sidebar li a{color: #fff;text-decoration: none;}
+
+.matrix-animation{
+	width: 100%;
+	height: 350px;
+	color: rgba(0, 255, 0, .7);
+	background-color: #000;
+	text-shadow: rgba(255, 255, 255, .8) 0px 0px 4px;
+    position: relative;
+    overflow: hidden;
+}
+@-webkit-keyframes fall{
+	from {top: -250px;}
+	to {top: 300px;}
+}
+@keyframes fall{
+	from {top: -250px;}
+	to {top: 300px;}
+}
+@-webkit-keyframes fade{
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+@keyframes fade{
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+.matrix-animation div{
+	position: absolute;	
+	top: 0;
+	-ms-transform-origin: 0%
+	-webkit-transform-origin: 0%
+	transform-origin: 0%
+	-ms-transform: rotate(90deg); 
+	-webkit-transform: rotate(90deg); 
+	transform: rotate(90deg); 
+	/*animation*/
+	-webkit-animation-name: fall, fade;	
+	animation-name: fall, fade;		
+	-webkit-animation-iteration-count: infinite; /* use 0 to infinite */
+	animation-iteration-count: infinite; /* use 0 to infinite */
+	-webkit-animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+	animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+}
+.matrix-animation h1{color: orangered;margin: 20px 0;font-size: 28px;}
+.f1{
+	font-size: 1.2em;
+}
+.f2{
+	font-size: .9em;
+}
+.c1{
+	color: rgba(215, 228, 215, 0.5);
+}
+.d1{
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+}
+.d2{
+	-webkit-animation-duration: 6s;
+	animation-duration: 6s;
+}
+.d3{
+	-webkit-animation-duration: 8s;
+	animation-duration: 8s;
+}
+.d4{
+	-webkit-animation-duration: 10s;
+	animation-duration: 10s;
+}
+.de{	
+	-webkit-animation-delay: 3s;
+	animation-duration: 3s;
+}
