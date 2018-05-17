@@ -109,8 +109,9 @@ html *{padding:0;margin:0;}
 	color: rgba(0, 255, 0, .7);
 	background-color: #000;
 	text-shadow: rgba(255, 255, 255, .8) 0px 0px 4px;
-    position: relative;
-    overflow: hidden;
+    	position: relative;
+    	overflow: hidden;
+	margin-top: 30px;
 }
 @-webkit-keyframes fall{
 	from {top: -250px;}
