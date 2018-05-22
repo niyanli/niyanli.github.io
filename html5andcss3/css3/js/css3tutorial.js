@@ -17,4 +17,16 @@
 	    hljs.highlightBlock(block);
 	  });
 	});
+
+	//点击“亲自试一下”按钮
+	$('#btn_tryit').click(function(e){
+		if(window.localStorage){
+			localStorage.setItem("tryitHtml", $('#code_preview code').text());
+			location.href = "tryit.html";
+		}else{
+			alert('对不起，你的浏览器不支持localStorage');
+		}
+	});
+
+
 })();
