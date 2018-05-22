@@ -76,3 +76,4 @@ footer{margin-top: 30px;}
     height: 30px;
     background: url("../img/icons.png") no-repeat -12px -55px;
 }
+pre code{border: 1px solid #ccc;}
