@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3动画</title>
+	<link rel="stylesheet" href="./css/animation.css">
+	<link rel="stylesheet" href="./css/css3tutorial.css">
+	<link rel="stylesheet" href="./css/highLightdefault.css">
+</head>
+<body>
+	<div class="header">
+		<h3>HTML5和CSS3教程</h3>
+	</div>
+	<div class="navbar-wrap">
+		<nav class="navbar" id="sidebar_wrapper">
+			<ul class="nav nav-sidebar">
+				<li>
+					<a href="css3history.html">CSS3历史</a>
+				</li>
+				<li >
+					<a href="whatiscss3.html">CSS3是什么</a>
+				</li>
+				<li class="cur">
+					<a href="#">CSS3动画</a>
+				</li>
+			</ul>
+		</nav>
+		<button type="button" class="hamburger is-closed" id="hambBtn">
+			<span class="hamb-top"></span>
+			<span class="hamb-middle"></span>
+			<span class="hamb-bottom"></span>
+		</button>
+	</div>
+	<article>
+		<header>
+			<h1>CSS3动画</h1>
+		</header>
+		<section class="from">
+			<a href="http://www.html5andcss3.org/css3animation.php">英文原版在这里</a>
+		</section>
+		<section>
+			<p>
+				现在先从CSS3动画开始学习。动画是CSS3最具创新的特性，虽然它还没有被所有主流浏览器支持，但是它很适合减少外部插件的情况。			
+			</p>
+			<p>
+				CSS3动画没有使用Flash或任何其他动画应用程序而使对象动画化。使用CSS3的这一功能，你可以通过动画方式将对象从一种样式转换为另一种样式。
+			<p>
+				除IE之外的所有主流浏览器都支持动画功能。它将对象的样式逐渐地更改为另一种样式，完整的动画依赖于关键帧（keyframes）的声明。
+			</p>
+
+		</section>
+		<section>
+			<p class="sub-title">动画示例与语法</p>							
+			<div style="padding:10px 0;border:1px solid #ccc;width:430px;float:left;">
+				<div class="" id="animated_div">
+					动画div
+				</div>
+			</div>
+			<div class="browser-wrap">
+				<div class="right browser">
+					<p>浏览器支持情况</p>
+					<i class="IE no"></i>
+					<i class="firefox yes"></i>
+					<i class="opera yes"></i>
+					<i class="safari yes"></i>
+					<i class="chrome yes"></i>
+				</div>
+			</div>			
+			<div class="code-view-container">
+				<pre id="code_preview">
+					<code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    	 &lt;title>标题&lt;/title&gt;
+    &lt;/head&gt;
+	&lt;style&gt;
+		#animated_div
+		{
+			text-align:center;
+			width:60px;
+			height:40px;
+			background:#6699FF;
+			color:#ffffff;
+			position:relative;
+
+			padding:10px;
+			animation:animated_div 5s infinite;
+			-moz-animation:animated_div 5s infinite;
+			-webkit-animation:animated_div 5s infinite;
+			border-radius:5px;
+			-webkit-border-radius:5px;
+		}
+		 
+		@keyframes animated_div
+		{
+			0%   {left:0px;}
+			20%  {left:50px; background-color: green;}
+			40%  {left:140px; background-color: red;}
+			60%  {left:280px; background-color: yellow;}
+			80%  {left:425px; background-color: blue;}
+			100% {left:0px; background-color: pink;}
+		}
+		 
+		@-webkit-keyframes animated_div
+		{
+			0%   {left:0px;}
+			20%  {left:50px; background-color: green; margin-top: 50px;}
+			40%  {left:140px; background-color: red;margin-top: 0px;}
+			60%  {left:280px; background-color: yellow;margin-top: 50px;}
+			80%  {left:425px; background-color: blue;margin-top: 0px;}
+			100% {left:0px; background-color: pink;}
+		}
+		 
+		@-moz-keyframes animated_div
+		{
+			0%   {left:0px;}
+			20%  {left:50px; background-color: green;}
+			40%  {left:140px; background-color: red;}
+			60%  {left:280px; background-color: yellow;}
+			80%  {left:425px; background-color: blue;}
+			100% {left:0px; background-color: pink;}
+		}
+	&lt;/style&gt;
+    
+    &lt;body&gt;
+    	&lt;div id="animated_div"&gt;
+    		动画div
+    	&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;						
+					</code>
+					<span type="button" class="right btn-tryit">亲自试一下</span>
+				</pre>
+				
+			</div>			
+		</section>
+		<footer>
+			<div class="left">
+				<h4 class="morelinks"><a href="whatiscss3.html" title="CSS3是什么">上一节</a></h4>
+			</div>
+			<div class="right">
+				<h4 class="morelinks"><a href="">下一节</a></h4>
+			</div>
+		</footer>
+	</article>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script src="./js/highlight.pack.js"></script>
+	<script src="./js/css3tutorial.js"></script>
+</body>
+</html>
