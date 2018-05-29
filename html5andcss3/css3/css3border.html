@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3边框</title>
+	<link rel="stylesheet" href="./css/animation.css">
+	<link rel="stylesheet" href="./css/css3tutorial.css">
+	<link rel="stylesheet" href="./css/highLightdefault.css">
+	<style>
+		
+        #border_radius
+        {
+            border:2px solid;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            background: #6AAFCF;
+            border-radius:25px;
+            -moz-border-radius:25px; /* For Firefox Browser */
+            -webkit-border-radius: 25px; /* For Safari and Google Chrome Browser */
+            -o-border-radius: 25px /* For Opera Browser */
+        }
+ 
+        #box_shadow
+        {
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            background: #6AAFCF;
+            -moz-box-shadow: 15px 15px 5px #888245; /* For Firefox/Mozilla */
+            -webkit-box-shadow: 15px 15px 5px #888245; /* For Google Chrome and Safari */
+            -o-box-shadow: 15px 15px 5px #888245; /* For Opera */
+            box-shadow: 15px 15px 5px #888245;
+        }
+         
+        #border_image
+        {
+        	border:15px solid transparent;
+            -moz-border-image:url(./img/border.png) 30 30 round; /* Firefox */
+            -webkit-border-image:url(./img/border.png) 30 30 round; /* Safari and Chrome */
+            -o-border-image:url(./img/border.png) 30 30 round; /* Opera */
+            border-image:url(./img/border.png) 30 30 round;
+        }               
+ 
+    </style> 
+</head>
+<body>
+	<div class="header">
+		<h3>HTML5和CSS3教程</h3>
+	</div>
+	<div class="navbar-wrap">
+		<nav class="navbar" id="sidebar_wrapper">
+			<ul class="nav nav-sidebar">
+				<li>
+					<a href="css3history.html">CSS3历史</a>
+				</li>
+				<li >
+					<a href="whatiscss3.html">CSS3是什么</a>
+				</li>
+				<li>
+					<a href="css3animation.html">CSS3动画</a>
+				</li>
+				<li class="cur">
+					<a href="#">CSS3边框</a>
+				</li>
+				<li>
+					<a href="css3background.html">CSS3背景</a>
+				</li>
+				<li>
+					<a href="css3font.html">CSS3字体</a>
+				</li>
+				<li>
+					<a href="css3mcolumn.html">多列</a>
+				</li>
+				<li>
+					<a href="css3texteffects.html">CSS3文字效果</a>
+				</li>
+				<li>
+					<a href="css3transitions.html">过渡效果</a>
+				</li>
+				<li>
+					<a href="css3userinterface.html">CSS3用户界面</a>
+				</li>
+				<li>
+					<a href="css32dtransform.html">CSS3 2D变换</a>
+				</li>
+				<li>
+					<a href="css33dtransform.html">CSS3 3D变换</a>
+				</li>
+			</ul>
+		</nav>
+		<button type="button" class="hamburger is-closed" id="hambBtn">
+			<span class="hamb-top"></span>
+			<span class="hamb-middle"></span>
+			<span class="hamb-bottom"></span>
+		</button>
+	</div>
+	<article>
+		<header>
+			<h1>CSS3边框</h1>
+		</header>
+		<section class="from">
+			<a href="http://www.html5andcss3.org/css3border.php">英文原版在这里</a>
+		</section>
+		<section>
+			<p>
+				在上一节中，学习了关于CSS3动画的基础知识。 在本节中，我们将学习CSS3边框，当你尝试为你的内容设计一个时尚的容器时这是最有用的。
+			</p>
+			<p>
+				CSS3边框减少了Photoshop和其他图形应用程序的人力成本，个人就可以在CSS3边框的帮助下创建圆形边框，边框阴影，基于图像的边框等。
+			</p>
+			<p>
+				基本上我们使用三个属性来创建边框：
+			</p>
+			<div class="features-wrap">
+				<p>✔ border-radius</p>
+				<p>✔ box-shadow</p>
+				<p>✔ border-image</p>
+			</div>
+			<p>
+				border-radius是CSS3的一个属性，通过它我们可以创建圆角。
+			</p>
+			<p>
+				box-shadow是CSS3的一个属性，通过它我们可以创建边框的阴影。
+			</p>
+			<p>
+				border-image是CSS3的一个属性，通过它我们可以创建自定义边框，因为我们可以将自己的图像作为边框。
+			</p>
+
+		</section>
+		<section>
+			<p class="sub-title">示例与语法</p>		
+			<div style="position:relative;">
+				<div style="padding:10px 20px;border:1px solid #ccc;width:430px;">
+					<p id="border_radius">
+			        	使用border-radius属性可以做出圆角边框            
+			        </p>         
+			        <p id="box_shadow">
+			        	使用box-shadow属性可以给一个盒子创建边框阴影
+			        </p>
+			        <p id="border_image" style="margin-top:20px;">
+			        	你可以看到自定义边框。图片可以是*.png或者*.jpg格式
+			        </p>	
+				</div>
+				<div class="browser" style="position:absolute;right:0;bottom:10px;">
+					<p>浏览器支持情况</p>
+					<i class="IE yes"></i>
+					<i class="firefox yes"></i>
+					<i class="opera yes"></i>
+					<i class="safari yes"></i>
+					<i class="chrome yes"></i>
+				</div>
+			</div>
+						
+			<div class="code-view-container">
+				<pre id="code_preview" data-lang="text/html">
+					<code class="html" data-lang="text/html">
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt;     
+    &lt;head&gt;
+         &lt;title>标题&lt;/title&gt;
+    &lt;/head&gt;     
+    &lt;style&gt;    	
+        #border_radius
+        {
+            border:2px solid;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            background: #6AAFCF;
+            border-radius:25px;
+            -moz-border-radius:25px; /* For Firefox Browser */
+            -webkit-border-radius: 25px; /* For Safari and Google Chrome Browser */
+            -o-border-radius: 25px /* For Opera Browser */
+        }
+ 
+        #box_shadow
+        {
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            background: #6AAFCF;
+            -moz-box-shadow: 15px 15px 5px #888245; /* For Firefox/Mozilla */
+            -webkit-box-shadow: 15px 15px 5px #888245; /* For Google Chrome and Safari */
+            -o-box-shadow: 15px 15px 5px #888245; /* For Opera */
+            box-shadow: 15px 15px 5px #888245;
+        }
+         
+        #border_image
+        {
+            border:15px solid transparent;
+            -moz-border-image:url(./img/border.png) 30 30 round; /* Firefox */
+            -webkit-border-image:url(./img/border.png) 30 30 round; /* Safari and Chrome */
+            -o-border-image:url(./img/border.png) 30 30 round; /* Opera */
+            border-image:url(./img/border.png) 30 30 round;
+        }               
+ 
+    &lt;/style&gt;     
+    &lt;body&gt; 
+        &lt;p id="border_radius"&gt;
+        	使用border-radius属性可以做出圆角边框            
+        &lt;/p&gt;         
+        &lt;p id="box_shadow"&gt;
+        	使用box-shadow属性可以给一个盒子创建边框阴影
+        &lt;/p&gt;
+        &lt;p id="border_image"&gt;
+        	你可以看到自定义边框。图片可以是*.png或者*.jpg格式
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;						
+					</code>
+					<span type="button" class="right btn-tryit" id="btn_tryit">亲自试一下</span>
+				</pre>
+				
+			</div>			
+		</section>
+		<footer>
+			<div class="left">
+				<h4 class="morelinks"><a href="css3animation.html" title="CSS3动画">上一节</a></h4>
+			</div>
+			<div class="right">
+				<h4 class="morelinks"><a href="">下一节</a></h4>
+			</div>
+		</footer>
+	</article>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script src="./js/highlight.pack.js"></script>
+	<script src="./js/css3tutorial.js"></script>	
+</body>
+</html>
