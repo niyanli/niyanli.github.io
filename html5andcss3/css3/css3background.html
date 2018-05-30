@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3背景</title>
+	<link rel="stylesheet" href="./css/animation.css">
+	<link rel="stylesheet" href="./css/css3tutorial.css">
+	<link rel="stylesheet" href="./css/highLightdefault.css">
+	<style>
+		#background_size
+        {
+            background:url(./img/flower.png);
+            background-size:100px 40px;
+            -moz-background-size:100px 40px; /* Firefox 3.6 */
+            -webkit-background-size:100px 40px;
+            background-repeat:no-repeat;
+            padding-top:40px;
+        }
+        #backgroundorigin
+        {
+            border:1px dotted green;
+            padding:25px;
+            background-image:url('./img/cborder.png');
+            background-repeat:no-repeat;
+            background-position:left;
+            background-origin:border-box;
+        }
+         
+        #backgroundorigin1
+        {
+            border:1px dotted green;
+            padding:25px;
+            background-image:url('./img/cborder.png');
+            background-repeat:no-repeat;
+            background-position:left;
+            background-origin:content-box;
+        }      
+         
+    </style>
+</head>
+<body>
+	<div class="header">
+		<h3>HTML5和CSS3教程</h3>
+	</div>
+	<div class="navbar-wrap">
+		<nav class="navbar" id="sidebar_wrapper">
+			<ul class="nav nav-sidebar">
+				<li>
+					<a href="css3history.html">CSS3历史</a>
+				</li>
+				<li >
+					<a href="whatiscss3.html">CSS3是什么</a>
+				</li>
+				<li>
+					<a href="css3animation.html">CSS3动画</a>
+				</li>
+				<li>
+					<a href="css3border.html">CSS3边框</a>
+				</li>
+				<li class="cur">
+					<a href="#">CSS3背景</a>
+				</li>
+				<li>
+					<a href="css3font.html">CSS3字体</a>
+				</li>
+				<li>
+					<a href="css3mcolumn.html">多列</a>
+				</li>
+				<li>
+					<a href="css3texteffects.html">CSS3文字效果</a>
+				</li>
+				<li>
+					<a href="css3transitions.html">过渡效果</a>
+				</li>
+				<li>
+					<a href="css3userinterface.html">CSS3用户界面</a>
+				</li>
+				<li>
+					<a href="css32dtransform.html">CSS3 2D变换</a>
+				</li>
+				<li>
+					<a href="css33dtransform.html">CSS3 3D变换</a>
+				</li>
+			</ul>
+		</nav>
+		<button type="button" class="hamburger is-closed" id="hambBtn">
+			<span class="hamb-top"></span>
+			<span class="hamb-middle"></span>
+			<span class="hamb-bottom"></span>
+		</button>
+	</div>
+	<article>
+		<header>
+			<h1>CSS3背景</h1>
+		</header>
+		<section class="from">
+			<a href="http://www.html5andcss3.org/css3background.php">英文原版在这里</a>
+		</section>
+		<section>
+			<p>
+				通过上一节的学习，你可能已经熟悉了CSS3边框。在本节中，我们将要学习所有主流浏览器都支持的CSS3背景。
+			</p>
+			<p>
+				CSS3的系列background属性用于调整背景各项属性的大小。它还可以用于实现多重背景。在CSS3之前，我们无法调整背景大小，现在有了CSS3就可以实现这一功能了。
+			</p>
+			<p>
+				背景主要有两个属性，可用于背景确定，背景大小，多背景图等。下面两个就是CSS3背景属性：
+			</p>
+			<div class="features-wrap">
+				<p>✔ background-size</p>
+				<p>✔ background-origin</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;✔ <span style="color:#000; font-size:10px;">background-origin:border-box</span></p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;✔ <span style="color:#000; font-size:10px;">background-origin:content-box</span></p>
+			</div>			
+		</section>
+		<section>
+			<p>
+				<b>background-size</b>属性用于确定背景大小，可以是像素格式或百分比格式。
+			</p>
+			<p class="sub-title">示例与语法</p>							
+			<div style="padding:10px 0;border:1px solid #ccc;width:200px;float:left;">
+				<div id="background_size"> </div>
+			</div>
+			<div class="browser-wrap">
+				<div class="right browser">
+					<p>浏览器支持情况</p>
+					<i class="IE yes"></i>
+					<i class="firefox yes"></i>
+					<i class="opera yes"></i>
+					<i class="safari yes"></i>
+					<i class="chrome yes"></i>
+				</div>
+			</div>			
+			<div class="code-view-container">
+				<pre class="code-preview" data-lang="text/html">
+					<code class="html" data-lang="text/html">
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt;     
+    &lt;head&gt;
+         &lt;title>标题&lt;/title&gt;
+    &lt;/head&gt;     
+    &lt;style&gt;         
+        #background_size
+        {
+            background:url(./img/flower.png);
+            background-size:100px 40px;
+            -moz-background-size:100px 40px; /* Firefox 3.6 */
+            -webkit-background-size:100px 40px;
+            background-repeat:no-repeat;
+            padding-top:40px;
+        }         
+    &lt;/style&gt;     
+    &lt;body&gt; 
+        &lt;div id="background_size"> &lt;/div&gt;         
+        &lt;div&gt;
+            &lt;p&gt;以下是原图：&lt;/p&gt;
+            &lt;img src="./img/flower.png" alt="image" title="original image"/&gt;
+        &lt;/div&gt; 
+    &lt;/body&gt;     
+&lt;/html&gt;					
+					</code>
+					<span type="button" class="right btn-tryit" class="btn-tryit">亲自试一下</span>
+				</pre>
+				
+			</div>			
+		</section>
+		<section>
+			<p>
+				<b>background-origin</b>属性用于定义背景位置，它指定背景的区域，即页面上应该显示的位置。
+			</p>
+		</section>
+		<section>
+			<p class="sub-title">示例与语法</p>	
+			<div style="position:relative;">
+				<div style="padding:10px 10px;border:1px solid #ccc;width:660px;">
+					<div id="backgroundorigin">
+			            This div containing the image with border-box property.
+			            This div containing the image with border-box property.
+			            This div containing the image with border-box property.
+			            This div containing the image with border-box property.
+			        </div>	         
+			        <div id="backgroundorigin1">
+			            This div containing the image with content box property.
+			            This div containing the image with content box property.
+			            This div containing the image with content box property.
+			            This div containing the image with content box property.
+			        </div>
+				</div>
+				<div class="browser" style="position:absolute;right:0;bottom:10px;">
+					<p>浏览器支持情况</p>
+					<i class="IE yes"></i>
+					<i class="firefox yes"></i>
+					<i class="opera yes"></i>
+					<i class="safari yes"></i>
+					<i class="chrome yes"></i>
+				</div>				
+			</div>			
+			<div class="code-view-container">
+				<pre class="code-preview" data-lang="text/html">
+					<code class="html" data-lang="text/html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+         &lt;title>标题&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;style&gt;
+        #backgroundorigin
+        {
+            border:1px dotted green;
+            padding:25px;
+            background-image:url('./img/cborder.png');
+            background-repeat:no-repeat;
+            background-position:left;
+            background-origin:border-box;
+        }         
+        #backgroundorigin1
+        {
+            border:1px dotted green;
+            padding:25px;
+            background-image:url('./img/cborder.png');
+            background-repeat:no-repeat;
+            background-position:left;
+            background-origin:content-box;
+        }
+    &lt;/style&gt;
+    &lt;body&gt;
+        &lt;div id="backgroundorigin"&gt;
+            This div containing the image with border-box property.
+            This div containing the image with border-box property.
+            This div containing the image with border-box property.
+            This div containing the image with border-box property.
+        &lt;/div&gt;
+        &lt;div id="backgroundorigin1"&gt;
+            This div containing the image with content box property.
+            This div containing the image with content box property.
+            This div containing the image with content box property.
+            This div containing the image with content box property.
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code>
+					<span type="button" class="right btn-tryit" class="btn-tryit">亲自试一下</span>
+				</pre>
+				
+			</div>			
+		</section>		
+		<footer>
+			<div class="left">
+				<h4 class="morelinks"><a href="css3border.html" title="CSS3边框">上一节</a></h4>
+			</div>
+			<div class="right">
+				<h4 class="morelinks"><a href="css3font.html" title="CSS3字体">下一节</a></h4>
+			</div>
+		</footer>
+	</article>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script src="./js/highlight.pack.js"></script>
+	<script src="./js/css3tutorial.js"></script>
+</body>
+</html>	
